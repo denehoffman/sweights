@@ -190,7 +190,7 @@ class SWeight:
                     print("\t", i, norm)
             self.pdfsum = lambda x: sum(
                 [
-                    self.yields[i] * self.pdfs[i](x) / self.pdfnorms[i]
+                    self.yields[i] * self.pdfs[i](*x) / self.pdfnorms[i]
                     for i in range(self.ncomps)
                 ]
             )
