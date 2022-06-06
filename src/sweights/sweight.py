@@ -188,7 +188,7 @@ class SWeight:
                 print("    PDF normalisations:")
                 for i, norm in enumerate(self.pdfnorms):
                     print("\t", i, norm)
-            self.pdfsum = lambda x: sum(
+            self.pdfsum = lambda *x: sum(
                 [
                     self.yields[i] * self.pdfs[i](*x) / self.pdfnorms[i]
                     for i in range(self.ncomps)
